@@ -19,5 +19,5 @@ def recreate_db():
     drop_tables()
     create_tables()
 
-
+#drop_tables()
 recreate_db()

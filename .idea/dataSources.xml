@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3858161416">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - peewee.db" uuid="d758a99e-b6b7-4d28-bbf6-1ee534cbe1fe">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/peewee.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

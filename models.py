@@ -6,7 +6,7 @@ class FacebookUser(Model):
     url = CharField(default='')
     name = CharField(default='')
     job = CharField(default='')
-    birthday = CharField(default='')
+    birthday = IntegerField(default=0)
 
 
 class Group(Model):

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Sqlite (Xerial) - peewee.db" uuid="d758a99e-b6b7-4d28-bbf6-1ee534cbe1fe">
+    <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+      <schema id="1">
+        <visible>1</visible>
+      </schema>
+      <table id="2" parent="1" name="facebookuser"/>
+      <table id="3" parent="1" name="group"/>
+      <table id="4" parent="1" name="joinfriends"/>
+      <table id="5" parent="1" name="joingroups"/>
+      <column id="6" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="7" parent="2" name="url">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255) (0,-1)|12</data-type>
+      </column>
+      <column id="8" parent="2" name="name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255) (0,-1)|12</data-type>
+      </column>
+      <column id="9" parent="2" name="job">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255) (0,-1)|12</data-type>
+      </column>
+      <column id="10" parent="2" name="birthday">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <key id="11" parent="2">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="12" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="13" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255) (0,-1)|12</data-type>
+      </column>
+      <key id="14" parent="3">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="15" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="16" parent="4" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="17" parent="4" name="user2_id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <key id="18" parent="4">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="19" parent="4" name="#FAKE_joinfriends_2">
+        <name-surrogate>1</name-surrogate>
+        <columns>user_id</columns>
+        <deferrable>1</deferrable>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>~.facebookuser.#1</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="20" parent="4" name="#FAKE_joinfriends_1">
+        <name-surrogate>1</name-surrogate>
+        <columns>user2_id</columns>
+        <deferrable>1</deferrable>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>~.facebookuser.#1</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="21" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="22" parent="5" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="23" parent="5" name="group_id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <key id="24" parent="5">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="25" parent="5" name="#FAKE_joingroups_2">
+        <name-surrogate>1</name-surrogate>
+        <columns>user_id</columns>
+        <deferrable>1</deferrable>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>~.facebookuser.#1</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="26" parent="5" name="#FAKE_joingroups_1">
+        <name-surrogate>1</name-surrogate>
+        <columns>group_id</columns>
+        <deferrable>1</deferrable>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>~.group.#1</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
